@@ -300,6 +300,18 @@
 
 // xyz(abc(10))
 
+// let abc = () => {
+//     console.log("ABC")
+//     return () => {
+//         console.log("XYZ")
+//     }
+// }
+
+// let a = abc()
+// a()
+
+// abc()()
+
 
 // ============= Arrow Function =================
 
@@ -334,3 +346,110 @@
 //     xyz()
 // }
 // abc()
+
+
+// ============= Closure =================
+
+// let abc = () => {
+//     let a = "ABC"
+
+//     return () => {
+//         console.log(a)
+//     }
+
+//     xyz()
+// }
+
+
+// ============= Array Functions =================
+// let arr = [
+//     {
+//         id: 1,
+//         name: "ABC",
+//         status: false
+//     },
+//     {
+//         id: 2,
+//         name: "KJL",
+//         status: false
+//     },
+//     {
+//         id: 3,
+//         name: "TYU",
+//         status: false
+//     },
+//     {
+//         id: 4,
+//         name: "WER",
+//         status: false
+//     },
+//     {
+//         id: 5,
+//         name: "XYZ",
+//         status: false
+//     },
+// ]
+
+// for (let i = 0; i < arr.length; i++) {
+//     let x = arr[i]
+//     if (x.id <= 3) {
+//         console.log(x)
+//     }
+// }
+
+
+// arr.forEach((x) => {
+//     if (x.id <= 3) {
+//         console.log(x)
+//     }
+// })
+
+// let a = arr.map((x) => {
+//     return x.name
+// })
+// console.log(a)
+
+// let a = arr.filter((x) => {
+//     if (!x.status) {
+//         return x
+//     }
+// })
+
+// a = a.map(x => x.name)
+// console.log(a)
+
+
+// let obj = arr.find(x => {
+//     if (x.id == 5) {
+//         return x
+//     }
+// })
+
+// console.log(obj)
+
+
+// let i = arr.findIndex(x => {
+//     if (x.id == 10) {
+//         return x
+//     }
+// })
+// console.log(i)
+
+
+// let isAllStatusTrue = arr.some(x => {
+//     if (x.status) {
+//         return x
+//     }
+// })
+
+// console.log(isAllStatusTrue)
+
+
+// let isAllStatusTrue = arr.every(x => {
+//     if (!x.status) {
+//         return x
+//     }
+// })
+
+// console.log(isAllStatusTrue)
+
